@@ -471,6 +471,7 @@ def backtest_analysis(
             )
         print("-" * 40)
 
+    return_result = {}
     if pair_info:
         print("\n--- Pair Result ---")
         print('-' * 95)
@@ -490,7 +491,7 @@ def backtest_analysis(
             print('{:<6d}{:>10s}{:>15s}{:>15s}{:>15s}{:>15s}{:>15s}'.format(
                                 pair_total_trades,pair,pair_sum_result,pair_avg_result,pair_worst_trade,pair_best_trade,pair_win_rate
                             ))
-
+            return_result[pair] = pair_sum_result
 
         
-    return df_trades, df_days
+    return df_trades, df_days, return_result
