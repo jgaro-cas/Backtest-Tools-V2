@@ -491,4 +491,6 @@ def backtest_analysis(
                                 pair_total_trades,pair,pair_sum_result,pair_avg_result,pair_worst_trade,pair_best_trade,pair_win_rate
                             ))
 
+
+        
     return df_trades, df_days
